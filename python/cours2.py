@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf_8 -*-
 """
 Juste un module : le module table

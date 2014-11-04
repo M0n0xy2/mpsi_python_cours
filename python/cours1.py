@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #probleme des 8 dames
 
 def printGrid(grid):
