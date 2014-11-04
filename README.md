@@ -1,4 +1,4 @@
-mpsi_python_cours
+Cours MPSI Python
 =================
 
 Mes cours sur python en MPSI
