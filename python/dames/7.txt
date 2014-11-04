@@ -1,0 +1,445 @@
+Elapsed time : 4.645056912093803ms
+=========================================
+======= Taille 7*7 : 40 solutions =======
+=========================================
+
+Taille 7*7 Solution 1 :
++ A B C D E F G +
+7             D 7
+6     D         6
+5           D   5
+4   D           4
+3         D     3
+2 D             2
+1       D       1
++ A B C D E F G +
+
+Taille 7*7 Solution 2 :
++ A B C D E F G +
+7             D 7
+6   D           6
+5       D       5
+4           D   4
+3 D             3
+2     D         2
+1         D     1
++ A B C D E F G +
+
+Taille 7*7 Solution 3 :
++ A B C D E F G +
+7             D 7
+6         D     6
+5     D         5
+4 D             4
+3           D   3
+2       D       2
+1   D           1
++ A B C D E F G +
+
+Taille 7*7 Solution 4 :
++ A B C D E F G +
+7             D 7
+6       D       6
+5 D             5
+4         D     4
+3   D           3
+2           D   2
+1     D         1
++ A B C D E F G +
+
+Taille 7*7 Solution 5 :
++ A B C D E F G +
+7         D     7
+6             D 6
+5   D           5
+4           D   4
+3     D         3
+2 D             2
+1       D       1
++ A B C D E F G +
+
+Taille 7*7 Solution 6 :
++ A B C D E F G +
+7       D       7
+6             D 6
+5     D         5
+4           D   4
+3   D           3
+2         D     2
+1 D             1
++ A B C D E F G +
+
+Taille 7*7 Solution 7 :
++ A B C D E F G +
+7         D     7
+6             D 6
+5   D           5
+4       D       4
+3           D   3
+2 D             2
+1     D         1
++ A B C D E F G +
+
+Taille 7*7 Solution 8 :
++ A B C D E F G +
+7       D       7
+6             D 6
+5         D     5
+4   D           4
+3           D   3
+2 D             2
+1     D         1
++ A B C D E F G +
+
+Taille 7*7 Solution 9 :
++ A B C D E F G +
+7     D         7
+6             D 6
+5   D           5
+4       D       4
+3           D   3
+2 D             2
+1         D     1
++ A B C D E F G +
+
+Taille 7*7 Solution 10 :
++ A B C D E F G +
+7   D           7
+6             D 6
+5         D     5
+4     D         4
+3 D             3
+2           D   2
+1       D       1
++ A B C D E F G +
+
+Taille 7*7 Solution 11 :
++ A B C D E F G +
+7     D         7
+6             D 6
+5       D       5
+4 D             4
+3         D     3
+2   D           2
+1           D   1
++ A B C D E F G +
+
+Taille 7*7 Solution 12 :
++ A B C D E F G +
+7           D   7
+6       D       6
+5             D 5
+4 D             4
+3     D         3
+2         D     2
+1   D           1
++ A B C D E F G +
+
+Taille 7*7 Solution 13 :
++ A B C D E F G +
+7           D   7
+6     D         6
+5             D 5
+4       D       4
+3 D             3
+2         D     2
+1   D           1
++ A B C D E F G +
+
+Taille 7*7 Solution 14 :
++ A B C D E F G +
+7 D             7
+6       D       6
+5             D 5
+4     D         4
+3           D   3
+2   D           2
+1         D     1
++ A B C D E F G +
+
+Taille 7*7 Solution 15 :
++ A B C D E F G +
+7     D         7
+6         D     6
+5             D 5
+4   D           4
+3       D       3
+2           D   2
+1 D             1
++ A B C D E F G +
+
+Taille 7*7 Solution 16 :
++ A B C D E F G +
+7   D           7
+6         D     6
+5             D 5
+4       D       4
+3 D             3
+2     D         2
+1           D   1
++ A B C D E F G +
+
+Taille 7*7 Solution 17 :
++ A B C D E F G +
+7       D       7
+6   D           6
+5             D 5
+4         D     4
+3     D         3
+2 D             2
+1           D   1
++ A B C D E F G +
+
+Taille 7*7 Solution 18 :
++ A B C D E F G +
+7           D   7
+6     D         6
+5         D     5
+4             D 4
+3 D             3
+2       D       2
+1   D           1
++ A B C D E F G +
+
+Taille 7*7 Solution 19 :
++ A B C D E F G +
+7           D   7
+6       D       6
+5   D           5
+4             D 4
+3         D     3
+2     D         2
+1 D             1
++ A B C D E F G +
+
+Taille 7*7 Solution 20 :
++ A B C D E F G +
+7   D           7
+6           D   6
+5     D         5
+4             D 4
+3       D       3
+2 D             2
+1         D     1
++ A B C D E F G +
+
+Taille 7*7 Solution 21 :
++ A B C D E F G +
+7         D     7
+6 D             6
+5       D       5
+4             D 4
+3     D         3
+2           D   2
+1   D           1
++ A B C D E F G +
+
+Taille 7*7 Solution 22 :
++ A B C D E F G +
+7 D             7
+6     D         6
+5         D     5
+4             D 4
+3   D           3
+2       D       2
+1           D   1
++ A B C D E F G +
+
+Taille 7*7 Solution 23 :
++ A B C D E F G +
+7   D           7
+6       D       6
+5 D             5
+4             D 4
+3         D     3
+2     D         2
+1           D   1
++ A B C D E F G +
+
+Taille 7*7 Solution 24 :
++ A B C D E F G +
+7           D   7
+6 D             6
+5     D         5
+4         D     4
+3             D 3
+2   D           2
+1       D       1
++ A B C D E F G +
+
+Taille 7*7 Solution 25 :
++ A B C D E F G +
+7           D   7
+6     D         6
+5 D             5
+4       D       4
+3             D 3
+2         D     2
+1   D           1
++ A B C D E F G +
+
+Taille 7*7 Solution 26 :
++ A B C D E F G +
+7 D             7
+6           D   6
+5       D       5
+4   D           4
+3             D 3
+2         D     2
+1     D         1
++ A B C D E F G +
+
+Taille 7*7 Solution 27 :
++ A B C D E F G +
+7         D     7
+6   D           6
+5           D   5
+4     D         4
+3             D 3
+2       D       2
+1 D             1
++ A B C D E F G +
+
+Taille 7*7 Solution 28 :
++ A B C D E F G +
+7   D           7
+6         D     6
+5 D             5
+4       D       4
+3             D 3
+2     D         2
+1           D   1
++ A B C D E F G +
+
+Taille 7*7 Solution 29 :
++ A B C D E F G +
+7   D           7
+6         D     6
+5     D         5
+4 D             4
+3             D 3
+2       D       2
+1           D   1
++ A B C D E F G +
+
+Taille 7*7 Solution 30 :
++ A B C D E F G +
+7           D   7
+6   D           6
+5         D     5
+4 D             4
+3       D       3
+2             D 2
+1     D         1
++ A B C D E F G +
+
+Taille 7*7 Solution 31 :
++ A B C D E F G +
+7       D       7
+6           D   6
+5 D             5
+4     D         4
+3         D     3
+2             D 2
+1   D           1
++ A B C D E F G +
+
+Taille 7*7 Solution 32 :
++ A B C D E F G +
+7         D     7
+6 D             6
+5           D   5
+4       D       4
+3   D           3
+2             D 2
+1     D         1
++ A B C D E F G +
+
+Taille 7*7 Solution 33 :
++ A B C D E F G +
+7     D         7
+6 D             6
+5           D   5
+4   D           4
+3         D     3
+2             D 2
+1       D       1
++ A B C D E F G +
+
+Taille 7*7 Solution 34 :
++ A B C D E F G +
+7     D         7
+6 D             6
+5           D   5
+4       D       4
+3   D           3
+2             D 2
+1         D     1
++ A B C D E F G +
+
+Taille 7*7 Solution 35 :
++ A B C D E F G +
+7 D             7
+6         D     6
+5   D           5
+4           D   4
+3     D         3
+2             D 2
+1       D       1
++ A B C D E F G +
+
+Taille 7*7 Solution 36 :
++ A B C D E F G +
+7       D       7
+6 D             6
+5     D         5
+4           D   4
+3   D           3
+2             D 2
+1         D     1
++ A B C D E F G +
+
+Taille 7*7 Solution 37 :
++ A B C D E F G +
+7     D         7
+6           D   6
+5   D           5
+4         D     4
+3 D             3
+2       D       2
+1             D 1
++ A B C D E F G +
+
+Taille 7*7 Solution 38 :
++ A B C D E F G +
+7   D           7
+6       D       6
+5           D   5
+4 D             4
+3     D         3
+2         D     2
+1             D 1
++ A B C D E F G +
+
+Taille 7*7 Solution 39 :
++ A B C D E F G +
+7         D     7
+6     D         6
+5 D             5
+4           D   4
+3       D       3
+2   D           2
+1             D 1
++ A B C D E F G +
+
+Taille 7*7 Solution 40 :
++ A B C D E F G +
+7       D       7
+6 D             6
+5         D     5
+4   D           4
+3           D   3
+2     D         2
+1             D 1
++ A B C D E F G +
+

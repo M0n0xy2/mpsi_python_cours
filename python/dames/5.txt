@@ -1,0 +1,95 @@
+Elapsed time : 0.25658143031551583ms
+=========================================
+======= Taille 5*5 : 10 solutions =======
+=========================================
+
+Taille 5*5 Solution 1 :
++ A B C D E +
+5         D 5
+4   D       4
+3       D   3
+2 D         2
+1     D     1
++ A B C D E +
+
+Taille 5*5 Solution 2 :
++ A B C D E +
+5         D 5
+4     D     4
+3 D         3
+2       D   2
+1   D       1
++ A B C D E +
+
+Taille 5*5 Solution 3 :
++ A B C D E +
+5     D     5
+4         D 4
+3   D       3
+2       D   2
+1 D         1
++ A B C D E +
+
+Taille 5*5 Solution 4 :
++ A B C D E +
+5   D       5
+4         D 4
+3     D     3
+2 D         2
+1       D   1
++ A B C D E +
+
+Taille 5*5 Solution 5 :
++ A B C D E +
+5       D   5
+4   D       4
+3         D 3
+2     D     2
+1 D         1
++ A B C D E +
+
+Taille 5*5 Solution 6 :
++ A B C D E +
+5 D         5
+4     D     4
+3         D 3
+2   D       2
+1       D   1
++ A B C D E +
+
+Taille 5*5 Solution 7 :
++ A B C D E +
+5       D   5
+4 D         4
+3     D     3
+2         D 2
+1   D       1
++ A B C D E +
+
+Taille 5*5 Solution 8 :
++ A B C D E +
+5 D         5
+4       D   4
+3   D       3
+2         D 2
+1     D     1
++ A B C D E +
+
+Taille 5*5 Solution 9 :
++ A B C D E +
+5   D       5
+4       D   4
+3 D         3
+2     D     2
+1         D 1
++ A B C D E +
+
+Taille 5*5 Solution 10 :
++ A B C D E +
+5     D     5
+4 D         4
+3       D   3
+2   D       2
+1         D 1
++ A B C D E +
+

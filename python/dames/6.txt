@@ -1,0 +1,45 @@
+Elapsed time : 1.0491847941447183ms
+========================================
+======= Taille 6*6 : 4 solutions =======
+========================================
+
+Taille 6*6 Solution 1 :
++ A B C D E F +
+6     D       6
+5           D 5
+4   D         4
+3         D   3
+2 D           2
+1       D     1
++ A B C D E F +
+
+Taille 6*6 Solution 2 :
++ A B C D E F +
+6   D         6
+5       D     5
+4           D 4
+3 D           3
+2     D       2
+1         D   1
++ A B C D E F +
+
+Taille 6*6 Solution 3 :
++ A B C D E F +
+6         D   6
+5     D       5
+4 D           4
+3           D 3
+2       D     2
+1   D         1
++ A B C D E F +
+
+Taille 6*6 Solution 4 :
++ A B C D E F +
+6       D     6
+5 D           5
+4         D   4
+3   D         3
+2           D 2
+1     D       1
++ A B C D E F +
+
