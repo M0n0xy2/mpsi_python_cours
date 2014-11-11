@@ -13,7 +13,7 @@ def random_bilist(size=8, random_fn=random.randint):
 
 def rice_list(size=8, approx_ln=False):
     """return the list of rice number"""
-    approx_fn = (lambda x: x) if approx_ln else (lambda x: int(math.log10(x)))
+    approx_fn = (lambda x: x) if approx_ln else (lambda x: math.floor(math.log10(x) + 1))
     lines = []
     for y in range(8):
         line = []
@@ -36,11 +36,11 @@ def chessboard(size=8, value=None):
         value = [[0]*size]*size
 
     buffer = "   " + " _____"*size + " \n"
-    for y in range(size):
+    for y in range(size, 0, -1):
         buffer += "   " + "|     "*size + "|\n"
-        buffer += "{:2} ".format(size-y)
+        buffer += "{:^3}".format(y)
         for x in range(size):
-            buffer += "|{:^5}".format(value[y][x])
+            buffer += "|{:^5}".format(value[y-1][x])
         buffer += "|\n"
         buffer += "   " + "|_____"*size + "|\n"
     buffer += " "*6 + (" "*5).join([chr(c) for c in range(65, 65+size)]) + "\n"
@@ -48,7 +48,8 @@ def chessboard(size=8, value=None):
 
 
 def main(argv):
-    chessboard(10, random_bilist(10))
+    chessboard(8, rice_list(8, False))
+
 
 if __name__ == '__main__':
     main(sys.argv[1:])
