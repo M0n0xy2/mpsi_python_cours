@@ -23,7 +23,7 @@ def rice_list(size=8, approx_ln=False):
     return lines
 
 
-def chessboard(size=8, value=[[0]*8]*8):
+def chessboard(size=8, value=None):
     """just print a nice chessboard of size defaulted to 8 """
 
     if size < 1:
@@ -31,6 +31,9 @@ def chessboard(size=8, value=[[0]*8]*8):
     if size > 26:
         raise ValueError("size must be lower or equal to 26 "
                          "(we want to print a correct letter)")
+
+    if not value:
+        value = [[0]*size]*size
 
     buffer = "   " + " _____"*size + " \n"
     for y in range(size):
@@ -45,11 +48,7 @@ def chessboard(size=8, value=[[0]*8]*8):
 
 
 def main(argv):
-    print([[i+8*j for i in range(1, 9)] for j in range(8)])
-
-    chessboard(8, random_bilist(8))
-    chessboard(8, rice_list(8, False))
-    chessboard(28, rice_list(8, True))
+    chessboard(10, random_bilist(10))
 
 if __name__ == '__main__':
     main(sys.argv[1:])
