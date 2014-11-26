@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf_8 -*-
 
+import sys
 import operator
 import enum
 import string
@@ -85,7 +86,7 @@ class Lexer:
                 raise StopIteration
 
 
-def val_NPI(lexer):
+def evaluate(lexer):
     memory = {}
     stack = []
     for tok in lexer:
@@ -102,9 +103,15 @@ def val_NPI(lexer):
     return stack.pop()
 
 
-def exo1():
-    print(val_NPI(Lexer("34 13 + 5 *  ")))
+def main(argv):
+    while True:
+        expr = ""
+        while not expr:
+            expr = input("[NPI]>> ")
+            if expr == "exit":
+                return
+        print(evaluate(Lexer(expr)))
 
 
 if __name__ == "__main__":
-    exo1()
+    main(sys.argv[1:])
