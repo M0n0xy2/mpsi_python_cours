@@ -4,7 +4,17 @@ import sys
 
 
 class Board:
-    jumps = ((-2,1),(-1,2),(1,2),(2,1),(2,-1),(1,-2),(-1,-2),(-2,-1))
+    jumps = [
+        (-2, 1),
+        (-1, 2),
+        (1, 2),
+        (2, 1),
+        (2, -1),
+        (1, -2),
+        (-1, -2),
+        (-2, -1)
+    ]
+
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -18,7 +28,7 @@ class Board:
         assert self.board[x][y] == 0
         self.board[x][y] = counter
         if counter == self.width * self.height:
-            self.print()
+            self.print_out()
             sys.exit()
         for jump in self.jumps:
             tx, ty = x + jump[0], y + jump[1]
@@ -26,7 +36,7 @@ class Board:
                 self.fill(tx, ty, counter+1)
         self.board[x][y] = 0
 
-    def print(self):
+    def print_out(self):
         scale = len(str(self.width * self.height))
         line_sep = ("+" + scale * "-") * self.width + "+\n"
         to_print = line_sep
@@ -41,6 +51,7 @@ def usage(path):
     print("Usage: {} <width>")
     sys.exit(1)
 
+
 def main(argv):
     if len(argv) == 1:
         usage(sys.argv[0])
@@ -52,9 +63,9 @@ def main(argv):
             height = int(sys.argv[2])
     except:
         usage(sys.argv[0])
-    
+
     board = Board(width, height)
-    board.fill(0,0,1)
+    board.fill(0, 0, 1)
 
 
 if __name__ == "__main__":

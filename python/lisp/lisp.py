@@ -15,10 +15,15 @@ class TokenKind(enum.Enum):
     identifier = 3
 
 
-def LexingError(Exception):
-    def __init__(self, expr, msg):
-        self.expr = expr
-        self.msg = msg
+class LexingError(Exception):
+    def __init__(self, msg):
+        self.msg = str(msg)
+
+    def __str__(self):
+        return self.msg
+
+    def __repr__(self):
+        return self.__str__()
 
 
 class Token:
@@ -41,7 +46,7 @@ class Lexer:
             "+": operator.__add__,
             "-": operator.__sub__,
             "*": operator.__mul__,
-            "//": operator.__floordiv__,
+            "/": operator.__floordiv__,
             "%": operator.__mod__
         }
 
@@ -68,13 +73,13 @@ class Lexer:
                 self.pos += 1
             digit = int(self.input_str[start_pos:self.pos])
             return Token(TokenKind.digit, digit)
-        elif self.input_str[self.pos] in "+-*%":
+        elif self.input_str[self.pos] in "+-*%/":
             oper = self.input_str[self.pos]
             self.pos += 1
             return Token(TokenKind.operator, self.ope_dict[oper])
         else:
             wtf_char = self.input_str[self.pos]
-            raise LexingError("Unknwon char '{}'".format(wtf_char))
+            raise LexingError("Unknown char '{}'".format(wtf_char))
 
     def _at_end(self):
         return self.pos == len(self.input_str)
@@ -91,8 +96,9 @@ def evaluate(lexer):
     stack = []
     for tok in lexer:
         if tok.kind == TokenKind.operator:
-            ope2 = stack.pop()
-            ope1 = stack.pop()
+            if len(stack) < 2:
+                raise RuntimeError("Your expression is not well formed")
+            ope2, ope1 = stack.pop(), stack.pop()
             stack.append(tok.value(ope1, ope2))
         elif tok.kind == TokenKind.identifier:
             if tok.value not in memory:
@@ -110,8 +116,11 @@ def main(argv):
             expr = input("[NPI]>> ")
             if expr == "exit":
                 return
-        print(evaluate(Lexer(expr)))
-
+        try:
+            result = evaluate(Lexer(expr))
+            print(result)
+        except Exception as e:
+            print(e)
 
 if __name__ == "__main__":
     main(sys.argv[1:])
