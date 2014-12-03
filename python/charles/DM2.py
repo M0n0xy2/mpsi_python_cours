@@ -1,39 +1,41 @@
 #!/usr/bin/env python3
 # -*- coding: utf_8 -*-
-#***************************
+# **************************
 # PCSIB DM2 2015
 # Nom: Dizier Charles
-#****************************
+# ***************************
 
+import sys
 import string
 import unicodedata
 
 
 def fich2ch(chemin):
     try:
-        return open(chemin, "r").read()
+        f = open(chemin, "r")
+        t = f.read()
+        f.close()
+        return t
     except:
         print("Erreur à l'ouverture du fichier")
-        return str()
+        sys.exit(1)
 
 
 def signature(texte):
-    sign = {c: 0 for c in string.ascii_lowercase}
+    stats = {c: 0 for c in string.ascii_lowercase}
     counter = 0
     for c in texte:
         if c in string.ascii_letters:
-            sign[c.lower()] += 1
+            stats[c.lower()] += 1
             counter += 1
 
-    for letter in sign.keys():
-        sign[letter] = sign[letter] / counter
-    return sign
+    return {l: stats[l] / counter for l in string.ascii_lowercase}
 
 
 def affichesign(sign):
     buf = ""
     for letter in string.ascii_lowercase:
-        buf += "\'{}\' : {:.6f}\n".format(letter, sign[letter])
+        buf += "{} : {:.6f}\n".format(letter.upper(), sign[letter])
     print(buf)
 
 
@@ -42,11 +44,12 @@ def nettoiefrench(texte):
 
 
 def score(sign, ref_sign):
-    return sum([abs(sign[letter]-ref_sign[letter]) for letter in string.ascii_lowercase])
+    return sum([abs(sign[l]-ref_sign[l]) for l in string.ascii_lowercase])
 
 
 fr_sign = signature(nettoiefrench(fich2ch("vivelarepublique.txt")))
 en_sign = signature(fich2ch("churchill.txt"))
+
 
 def determinelangue(chemin):
     test_sign = signature(nettoiefrench(fich2ch(chemin)))

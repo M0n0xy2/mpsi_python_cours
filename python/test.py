@@ -4,19 +4,24 @@
 import sys
 import functools
 
+def myprint(*objects, sep="", end="\n", file=sys.stdout, flush=False):
+    file.write(sep.join([str(obj) for obj in objects]) + end)
+    if flush:
+        file.flush()
+
 def transformateur(func):
     """Transforme une fonction qui ne prend aucun parametre"""
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
-        print("debut de {}".format(func.__name__))
+        myprint("debut de {}".format(func.__name__))
         res = func(*args, **kwargs)
-        print("fin de {}".format(func.__name__))
+        myprint("fin de {}".format(func.__name__))
         return res
     return wrapper
 
 @transformateur
 def f(arg):
-    print(5 + arg)
+    myprint(5 + arg)
 
 def main(argv):
     f(10)

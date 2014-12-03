@@ -21,7 +21,16 @@ def print_set_man(parts):
 def print_set(parts):
     print(repr(parts).replace("[", "{").replace("]", "}").replace("{}", "\u2205"))
 
-def parties(seq):
+
+def P(seq):
+    return P_test(seq)
+
+
+def P_compr(seq):
+    return [[seq[j] for j in range(0, len(seq)) if ((i >> j) & 1) == 1] for i in range(0, 2**len(seq))]
+
+
+def P_man(seq):
     p = []
     for i in range(0, 2**len(seq)):
         s = []
@@ -32,9 +41,29 @@ def parties(seq):
     return p
 
 
+def P_prof(E):
+    Res = [[]]
+    for x in E:
+        S = []
+        for A in Res:
+            S += [A + [x]]
+        Res += S
+    return Res
+
+
+def P_test(E):
+    Res = [[]]
+    for x in E:
+        for A in Res:
+            A.append(x)
+            Res.append(A)
+    return Res
+
+
 def main(argv):
-    print_set(parties([1, 2, 3]))
-    print_set(parties([[[[]]]]))
+    print_set(P([1, 2]))
+    print_set(P([]))
+    print_set(P([1, 2, 3, 4]))
 
 if __name__ == "__main__":
     main(sys.argv[1:])
