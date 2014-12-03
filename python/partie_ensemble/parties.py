@@ -2,22 +2,29 @@
 
 import sys
 
-class MathSet(list):
-    def __str__(self):
-        if len(self) == 0:
-            # return "\N{EMPTY SET}"
-            return "\u2205"
+
+def print_set_man(parts):
+    raw = repr(parts)
+    to_print = str()
+    for c in raw:
+        if c == "[":
+            to_print += "{"
+        elif c == "]":
+            if to_print[-1] == "{":
+                to_print = to_print[:-1] + "\u2205"
+            else:
+                to_print += "}"
         else:
-            return "{{{}}}".format(", ".join([str(elem) for elem in self]))
+            to_print += c
+    print(to_print)
 
-
-def parties_compr(seq):
-    return MathSet([MathSet([seq[j] for j in range(0, len(seq)) if ((i >> j) & 1) == 1]) for i in range(0, 2**len(seq))])
+def print_set(parts):
+    print(repr(parts).replace("[", "{").replace("]", "}").replace("{}", "\u2205"))
 
 def parties(seq):
-    p = MathSet()
+    p = []
     for i in range(0, 2**len(seq)):
-        s = MathSet()
+        s = []
         for j in range(0, len(seq)):
             if ((i >> j) & 1) == 1:
                 s.append(seq[j])
@@ -26,8 +33,8 @@ def parties(seq):
 
 
 def main(argv):
-    print(parties_compr([1, 2, 3]))
-    print(parties([1, 2, 3]))
+    print_set(parties([1, 2, 3]))
+    print_set(parties([[[[]]]]))
 
 if __name__ == "__main__":
     main(sys.argv[1:])
