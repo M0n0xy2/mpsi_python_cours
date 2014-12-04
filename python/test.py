@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# -*- coding: utf_8 -*-
+# -*- coding: utf-8 -*-
 
 import sys
 import functools
