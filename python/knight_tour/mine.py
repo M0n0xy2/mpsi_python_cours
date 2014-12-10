@@ -2,19 +2,19 @@
 
 import sys
 
+jumps = [
+    (-2, 1),
+    (-1, 2),
+    (1, 2),
+    (2, 1),
+    (2, -1),
+    (1, -2),
+    (-1, -2),
+    (-2, -1)
+]
+
 
 class Board:
-    jumps = [
-        (-2, 1),
-        (-1, 2),
-        (1, 2),
-        (2, 1),
-        (2, -1),
-        (1, -2),
-        (-1, -2),
-        (-2, -1)
-    ]
-
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -30,8 +30,8 @@ class Board:
         if counter == self.width * self.height:
             self.print_out()
             sys.exit()
-        for jump in self.jumps:
-            tx, ty = x + jump[0], y + jump[1]
+        for dx, dy in jumps:
+            tx, ty = x + dx, y + dy
             if self.in_range_and_empty(tx, ty):
                 self.fill(tx, ty, counter+1)
         self.board[x][y] = 0
@@ -42,7 +42,7 @@ class Board:
         to_print = line_sep
         for y in range(self.height):
             for x in range(self.width):
-                to_print += "|{}".format(str(self.board[x][y]).rjust(scale))
+                to_print += "|" + str(self.board[x][y]).rjust(scale)
             to_print += "|\n" + line_sep
         print(to_print)
 
