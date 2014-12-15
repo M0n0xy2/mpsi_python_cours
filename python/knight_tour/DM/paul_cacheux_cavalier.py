@@ -151,4 +151,4 @@ if __name__ == '__main__':  # ==============MAIN==============
         N = int(p)
     except:
         pass
-    course_intelligente(manuel=True)
+    course_intelligente(manuel=False)
