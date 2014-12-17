@@ -11,7 +11,7 @@ def syracuse(n):
     syrac = [n]
     while n != 1:
         if n % 2 == 0:
-            n = int(n/2)
+            n = n//2
         else:
             n = 3*n + 1
         syrac.append(n)
@@ -65,11 +65,21 @@ def syracuse_inverse(options, limit=250):
         syrac.append(n)
     return syrac
 
+def syracuse_info(n):
+    syra = syracuse(n)
+    tdv = len(syra) - 1
+    def tdva(syra):
+        for pos, item in enumerate(syra[1:]):
+            if item <= n:
+                return pos
+    alt_max = max(syra)
+    return dict(temps_de_vol=tdv, temps_de_vol_altitude=tdva(syra), altitude_maximale=alt_max)
+
 
 def main(argv):
-    options = "1011"
-    print(syracuse_inverse(options))
-    print(syracuse_tree(options))
+    options = "01"
+    # print(syracuse_inverse(options))
+    print(syracuse_info(7))
 
 if __name__ == "__main__":
     main(sys.argv[1:])

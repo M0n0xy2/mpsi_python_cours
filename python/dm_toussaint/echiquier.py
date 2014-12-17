@@ -51,5 +51,5 @@ def main(argv):
     chessboard(8, rice_list(8, False))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main(sys.argv[1:])
