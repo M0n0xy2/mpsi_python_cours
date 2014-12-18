@@ -15,20 +15,24 @@ HISTORIQUE = []      # Variables globales
 
 def afficher(last_move=(0, 0)):
     """ Dessine la grille  n x n """
-    liste = [' .'] * (N**2)
+    step = len(str(N**2))
+    liste = [" "*(step-1) + "."] * (N**2)
     for i in range(len(HISTORIQUE)):
         (x, y) = HISTORIQUE[i]
-        liste[x + y * N] = i
+        if i == len(HISTORIQUE)-1:
+            liste[x + y * N] = "\033[91m" + str(i) + "\033[0m"
+        else:
+            liste[x + y * N] = str(i)
 
     if last_move != (0, 0):
         last_x = x + last_move[0]
         last_y = y + last_move[1]
-        liste[last_x + last_y * N] = " :"
+        liste[last_x + last_y * N] = " "*(step-1) + ":"
 
     Espace = "\n" * 15
     Titre = "TOUR {}. Cavalier en {}.\n\n".format(len(HISTORIQUE), (x, y))
-    L1 = " " + ("|{:2} " * N)[1:] + "\n"
-    L2 = " " + ("+---" * N)[1:] + "\n"
+    L1 = " " + (("|{:" + str(step) + "}") * N)[1:] + "\n"
+    L2 = " " + (("+" + "-"*step) * N)[1:] + "\n"
     Grille = (L1 + (L2 + L1) * (N-1)).format(*liste)
     print(Espace + Titre + Grille)
 
@@ -147,8 +151,9 @@ if __name__ == '__main__':  # ==============MAIN==============
     print("   - pour garder cette valeur, appuyer sur entrée,")
     p = input("   - sinon, proposer une valeur : ")
     try:
-        assert 2 < int(p) < 12
+        assert 2 < int(p)
         N = int(p)
     except:
         pass
     course_intelligente(manuel=False)
+    # course()
