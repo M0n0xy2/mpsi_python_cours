@@ -6,6 +6,7 @@ Juste un module : le module table
 
 import operator
 
+
 def table(n=7, min=0, max=11):
     """
     écrit quelques tables en Python,
@@ -13,8 +14,16 @@ def table(n=7, min=0, max=11):
     """
     min, max = sorted([min, max])
 
-    oper = [operator.__add__, operator.__sub__, operator.__mul__, operator.__pow__, operator.__truediv__, operator.__floordiv__, operator.__mod__]
-    symb = [ "+", "-", "*", "**", "/", "//", "%"]
+    oper = [
+        operator.__add__,
+        operator.__sub__,
+        operator.__mul__,
+        operator.__pow__,
+        operator.__truediv__,
+        operator.__floordiv__,
+        operator.__mod__
+    ]
+    symb = ["+", "-", "*", "**", "/", "//", "%"]
     tble = ""
 
     for suite in range(2):
@@ -24,7 +33,7 @@ def table(n=7, min=0, max=11):
                 tble += "{:7} {} {:2} = ".format(d, symb[i], n)
 
                 try:
-                    res = oper[i](d,n)
+                    res = oper[i](d, n)
                 except:
                     res = "erreur"
 
@@ -41,6 +50,9 @@ def table(n=7, min=0, max=11):
     print(tble)
 
 if __name__ == '__main__':
-    print("table(0)"); table(0)
-    print("table(1+1j)"); table(1+1j)
-    print("table(7, 10, 20)"); table(7,10,20)
+    print("table(0)")
+    table(0)
+    print("table(1+1j)")
+    table(1+1j)
+    print("table(7, 10, 20)")
+    table(7, 10, 20)

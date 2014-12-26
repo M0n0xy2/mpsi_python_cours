@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-#probleme des 8 dames
+# probleme des 8 dames
+
 
 def printGrid(grid):
     for y in range(8):
